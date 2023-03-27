@@ -61,3 +61,19 @@ body{
   color: #eee;
 }
 
+.form{
+  margin-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 9rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  gap: 10px;
+
+}
+

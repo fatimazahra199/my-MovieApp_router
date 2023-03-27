@@ -1,20 +1,18 @@
 import React from 'react'
-import movies from "../data/data"
 
-function MovieCard(props) {
+function MovieCard({ movie }) {
 
   return (
     <div className="movie-card">
-      <img src={props.movie.Poster} alt={props.movie.title} />
-      <h2>{props.movie.Title}</h2>
-      <p>{props.movie.Description}</p>
+      <img src={movie.Poster} alt={movie.title} />
+      <h2>{movie.Title}</h2>
+      <p>{movie.Description}</p>
       <div>
-       {/* <img src="MV5BMTk3ODA4Mjc0NF5BMl5BcG5nXkFtZTgwNDc1MzQ2OTE@.png" />   */}
-        <strong>Rating:</strong> {props.movie.rating}
+        <strong>Rating:</strong> {movie.rating}
+      </div>
+      <div>{movie.genres} </div>
     </div>
-    <div>{props.movie.genres} </div>
-    </div>
-  )
+  );
 }
 
 
