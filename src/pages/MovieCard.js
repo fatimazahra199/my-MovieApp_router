@@ -1,16 +1,16 @@
 import React from 'react'
 
-function MovieCard({ movie }) {
+function MovieCard({ getmovie }) {
 
   return (
     <div className="movie-card">
-      <img src={movie.Poster} alt={movie.title} />
-      <h2>{movie.Title}</h2>
-      <p>{movie.Description}</p>
+      <img src={getmovie.Poster} alt={getmovie.title} />
+      <h2>{getmovie.Title}</h2>
+      <p>{getmovie.Description}</p>
       <div>
-        <strong>Rating:</strong> {movie.rating}
+        <strong>Rating:</strong> {getmovie.rating}
       </div>
-      <div>{movie.genres} </div>
+      <div>{getmovie.genres} </div>
     </div>
   );
 }

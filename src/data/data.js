@@ -30,7 +30,7 @@ const movies = [
   },
   {
     id: 4,
-    Title: "The GodFather",
+    Title: "Harry Potter",
     Description: "1983",
     rating: 3,
     Poster:
