@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import movies from "../data/data";
 
-function MovieList({movie}) {
-    // const moviess = JSON.parse(localStorage.getItem("movie"))
-    // localStorage.setItem("movie", JSON.stringify(movie));
-    console.log("list",movie)
+
+function MovieList({ filter }) {
+  
 
   return (
-  <div className="card-list">
-  {movie.map((movie) => {
-    return <MovieCard getmovie={movie}/>;
-   })} 
-</div>);
+    <div className="card-list">
+      {filter.map((movie) => {
+        return <MovieCard getmovie={movie} key={movie.id} />;
+      })}
+    </div>
+  );
 }
 
 export default MovieList;

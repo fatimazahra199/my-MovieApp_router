@@ -14,13 +14,19 @@ function AddMovie({ addMovie }) {
     e.preventDefault();
     const newMovie = {
       id: Math.random(),
-      title: Title,
-      description: Description,
-      poster: Poster,
+      Title: Title,
+      Description: Description,
+      Poster: Poster,
       rating: parseInt(rating),
       genres: genres,
     };
     addMovie(newMovie);
+    // setMovies([...movies, newMovie]);
+    // localStorage.setItem("movie", JSON.stringify(movie.concat(newMovie)));
+    // localStorage.setItem("movie", JSON.stringify(movie));
+    // const store = JSON.stringify([...movies, newMovie]);
+    // localStorage.setItem("movie", store);
+
     setTitle("");
     setDescription("");
     setPoster("");
