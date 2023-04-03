@@ -4,7 +4,7 @@ const movies = [
   {
     id: 1,
     Title: "The Maze Runner",
-    Description: "1977",
+    Description: "2014",
     rating: 9.2,
     Poster:
       "https://image.tmdb.org/t/p/original/ode14q7WtDugFDp78fo9lCsmay9.jpg",
@@ -13,7 +13,7 @@ const movies = [
   {
     id: 2,
     Title: "the lord of the ring",
-    Description: "1980",
+    Description: "2001",
     rating: 8,
     Poster:
       "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81EBp0vOZZL.jpg",
@@ -22,7 +22,7 @@ const movies = [
   {
     id: 3,
     Title: "Interstellar",
-    Description: "1983",
+    Description: "26 octobre 2014",
     rating: 8.5,
     Poster:
       "https://image.tmdb.org/t/p/original/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
@@ -31,7 +31,7 @@ const movies = [
   {
     id: 4,
     Title: "Harry Potter",
-    Description: "1983",
+    Description: "14 novembre 2001",
     rating: 3,
     Poster:
       "https://media.harrypotterfanzone.com/philosophers-stone-20-years-of-movie-magic-ron-poster.jpg",

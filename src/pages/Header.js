@@ -1,13 +1,15 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { RiMovie2Fill } from "react-icons/ri";
+
 
 function Header() {
   return (
     <>
-      <Navbar className='text-white' >
+      <Navbar className="text-white">
         <Container>
-          <Navbar.Brand href="#home">FMOVIEX</Navbar.Brand>
+          <div href="#home"><RiMovie2Fill className='icon'/> FMOVIEX</div>
           <Nav className="me-auto">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#features">Movies Lists</Nav.Link>
@@ -15,7 +17,7 @@ function Header() {
           </Nav>
         </Container>
       </Navbar>
-      </>
-  )};
+    </>
+  );};
 
   export default Header;

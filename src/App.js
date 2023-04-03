@@ -3,7 +3,8 @@ import Home from './pages/Home';
 import movies from "./data/data";
 import Hero from './pages/Hero';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from './pages/Header'
+import Header from './pages/Header';
+
 
 
 

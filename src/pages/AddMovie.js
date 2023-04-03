@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import movies from "../data/data";
 
+
 function AddMovie({ addMovie }) {
   const [movie, setMovies] = useState(movies);
 
@@ -35,7 +36,8 @@ function AddMovie({ addMovie }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="form_add">
+      <h3>Add New Movie</h3>
       <input
         type="text"
         placeholder="Title"
