@@ -4,6 +4,13 @@ import Filter from "./Filter";
 import MovieCard from "./MovieCard";
 import AddMovie from "./AddMovie";
 import MovieList from "./MovieList";
+import Hero from './Hero';
+
+
+
+
+
+
 const moviess = localStorage.getItem("movie");
 if (
   !moviess ||
@@ -11,9 +18,8 @@ if (
 ) {
   localStorage.setItem("movie", JSON.stringify(movies));
 }
-// console.log(moviess)
 
-function Home() {
+function Home({ hero }) {
   const [movie, setMovies] = useState(movies);
 
   const [filterTitle, setFilterTitle] = useState("");
@@ -33,9 +39,8 @@ function Home() {
   };
 
   const moviesx = JSON.parse(localStorage.getItem("movie"));
-  console.log("getlocal", moviesx);
+  // console.log("getlocal", moviesx);
   let filtermovies = moviesx.filter((item) => {
-    console.log("chaque", item);
     return (
       item.Title &&
       item.Title.toLowerCase().includes(filterTitle.toLowerCase()) &&
@@ -45,17 +50,21 @@ function Home() {
 
   return (
     <>
-      <div>
+      {hero}
+
+      <div className="align">
         <Filter
           filterTitle={filterTitle}
           handleSearch={handleSearch}
           filterRating={filterRating}
           handleFilter={handleFilter}
         />
-        <MovieList filter={filtermovies}  />
+        <div className="form">
+          <AddMovie addMovie={addMovie} />
+        </div>
       </div>
-      <div className="form">
-        <AddMovie addMovie={addMovie} />
+      <div>
+        <MovieList filter={filtermovies} />
       </div>
     </>
   );

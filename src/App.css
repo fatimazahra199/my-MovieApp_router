@@ -10,14 +10,9 @@
   font-size: 1.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* .movie_list{
+  margin: 0 5rem;
+} */
 
 .movie-card{
   width: 250px;
@@ -50,15 +45,6 @@
     animation-duration: 1s;
     animation-timing-function: ease-out; */
 }
-/* @keyframes slide-up {
-  0% {
-    transform: translateY(100%);
-  }
-
-  100% {
-    transform: translateY(0%);
-  }
-} */
 
 form{
   margin-bottom: 5rem;
@@ -79,14 +65,15 @@ form button{
 
 .card-list{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   justify-content: center;
-  gap: 2;
-  margin: 0 6rem;
+  gap: 6;
+  margin: 0 1rem;
+  padding: 1rem;
 
 }
 
-@media screen and (max-width: 700px){
+@media (max-width: 700px) {
   .card-list {
       display: grid;
       grid-template-rows: repeat(1, 1fr);
@@ -109,13 +96,22 @@ body{
   max-height: 100vh;
 }
 
-.form{
+/* .form{
   margin-top: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 9rem;
+} */
+
+
+.align{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
+
+
 
 form{
   display: flex;
@@ -205,6 +201,29 @@ form{
   border-radius: 1.6rem;
   padding: .6rem;
 }
+.btn_ {
+    font-size: 1.2rem;
+    border-radius: 1.6rem;
+    padding: .6rem;
+}
+
+
+.form-modal{
+  background-color: #04152d;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  color: #eee;
+  align-items: center;
+  border-radius: 10px;
+  min-height: 100vh;
+
+  
+
+}
+
+
+
 
   
 

@@ -4,7 +4,7 @@ import React from 'react'
 function Filter ({filterTitle, handleSearch, handleFilter, filterRating })  {
   return (
     <div className="input">
-      <h3> Trending </h3>
+      {/* <h3> Trending </h3> */}
 
       <div className="inputs">
         <input
