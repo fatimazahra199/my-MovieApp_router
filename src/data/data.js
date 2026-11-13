@@ -17,7 +17,7 @@ const movies = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
     rating: 8,
     Poster:
-      "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/81EBp0vOZZL.jpg",
+      "https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg",
     genres: "Action, Adventure / Horror",
     banner: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg",
     trailer: "https://www.youtube.com/embed/V75dMMIW2B4",

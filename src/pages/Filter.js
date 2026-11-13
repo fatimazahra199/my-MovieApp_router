@@ -1,12 +1,12 @@
 import React from 'react'
 
-
 function Filter ({filterTitle, handleSearch, handleFilter, filterRating })  {
   return (
     <div className="input">
       {/* <h3> Trending </h3> */}
 
       <div className="inputs">
+        {/* Search by movie title */}
         <input
           type="text"
           placeholder="Search by text"
@@ -14,6 +14,7 @@ function Filter ({filterTitle, handleSearch, handleFilter, filterRating })  {
           onChange={handleSearch}
           className="input_t"
         />
+        {/* Show only movies with rating >= this number */}
         <input
           type="number"
           placeholder="Filter by rating"
@@ -28,7 +29,5 @@ function Filter ({filterTitle, handleSearch, handleFilter, filterRating })  {
     </div>
   );
 }
-
-
 
 export default Filter

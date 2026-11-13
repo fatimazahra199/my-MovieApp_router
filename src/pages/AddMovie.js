@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import movies from "../data/data";
 import ReactModal from "react-modal";
 
+// addMovie = function received from Home.js
 function AddMovie({ addMovie }) {
   const [movie, setMovies] = useState(movies);
+  // Is the popup open or closed?
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  // One state per form field
   const [Title, setTitle] = useState("");
   const [Description, setDescription] = useState("");
   const [Poster, setPoster] = useState("");
@@ -12,8 +15,10 @@ function AddMovie({ addMovie }) {
   const [genres, setGenres] = useState("");
   const [trailer, setTrailer] = useState("");
 
+  // Runs when the form is submitted
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();                 // stop the page from reloading
+    // Build the new movie object from the form fields
     const newMovie = {
       id: Math.random(),
       Title: Title,
@@ -23,8 +28,9 @@ function AddMovie({ addMovie }) {
       genres: genres,
       trailer:trailer,
     };
-    addMovie(newMovie);
+    addMovie(newMovie);                 // send it up to Home.js
 
+    // Clear the form and close the popup
     setTitle("");
     setDescription("");
     setPoster("");
@@ -36,12 +42,15 @@ function AddMovie({ addMovie }) {
 
   return (
     <div>
+      {/* Button that opens the popup */}
       <button class="btn_" onClick={() => setModalIsOpen(true)}>Add New Movie</button>
+
       <ReactModal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
         contentLabel="Add Movie Modal"
-        className="form-modal"
+        className="form-modal"            // the popup box (styled in App.css)
+        overlayClassName="form-overlay"   // the dark background behind it (design)
       >
         <form onSubmit={handleSubmit} className="form_add">
           <h3>Add New Movie</h3>
@@ -87,8 +96,9 @@ function AddMovie({ addMovie }) {
             onChange={(e) => setGenres(e.target.value)}
             required
           />
-          <button type="submit">Add Movie</button>
-          <button onClick={() => setModalIsOpen(false)}>Cancel</button>
+          {/* Main action = gold button, secondary = outlined button */}
+          <button type="submit" className="btn-submit">Add Movie</button>
+          <button onClick={() => setModalIsOpen(false)} className="btn-cancel">Cancel</button>
         </form>
       </ReactModal>
     </div>
